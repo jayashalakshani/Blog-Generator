@@ -11,6 +11,7 @@ The goal of the provided code is to build a simple blog generation tool using a 
 
 ## Explanation of Key Components
 1. Hugging Face API Integration
+   
 In this project, we use the Hugging Face API to interact with the Llama-2 language model. Hugging Face provides a platform for hosting and accessing various pre-trained models, including models for natural language generation (such as the Llama-2-7B-Chat-GGML model used here).
 
 Model Used: TheBloke/Llama-2-7B-Chat-GGML — This is a powerful language model capable of generating human-like text based on the prompt it receives.
@@ -24,6 +25,7 @@ Langchain's CTransformers is used to interface with Hugging Face models and send
 ![image](https://github.com/user-attachments/assets/b283e178-9654-4884-ab53-4e2024b0e40d)
 
 2. Prompt Templating with Langchain
+   
 We use Langchain’s PromptTemplate class to define a structured prompt that the model will respond to. This prompt specifies the job profile, the blog topic, and the number of words, all of which are inputs provided by the user via the Streamlit interface.
 
 ![image](https://github.com/user-attachments/assets/bae657ff-3599-419e-8f7a-4e899302df14)
@@ -36,6 +38,7 @@ blog_style is the type of writing style (for researchers, data scientists, or co
 This formatted prompt is then passed to the Llama-2 model, which generates a blog post according to the instructions.
 
 3. Streamlit Interface for User Input
+   
 Streamlit is used to build the front-end interface for this application. It allows users to input the blog title, select the desired writing style, and specify the number of words.
 
 ![image](https://github.com/user-attachments/assets/2f3bbe90-7e21-40db-b25d-487193b2ecea)
@@ -43,6 +46,7 @@ Streamlit is used to build the front-end interface for this application. It allo
 When the user clicks the “Generate” button, it triggers the model to generate a response using the Hugging Face model and displays the result on the page.
 
 4. Running Streamlit with ngrok
+   
 The application runs locally using Streamlit, but to make it accessible to anyone on the internet, we use ngrok. Ngrok creates a secure tunnel from a public URL to the local application running on your machine.
 
 Here’s how ngrok is integrated:
